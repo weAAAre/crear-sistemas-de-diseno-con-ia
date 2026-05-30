@@ -1,0 +1,203 @@
+.ds-button {
+  --ds-button-color-theme: #154973;
+  --ds-button-color-theme-strong: #0e324f;
+  --ds-button-color-theme-stronger: #081b2b;
+  --ds-button-color-text: #1b1b1b;
+  --ds-button-color-text-reverse: #ffffff;
+  --ds-button-color-text-disabled: #bec0c1;
+  --ds-button-color-link: #004dd1;
+  --ds-button-color-link-strong: #003ba1;
+  --ds-button-color-link-stronger: #002971;
+  --ds-button-color-disabled-bg: #f6f6f6;
+  --ds-button-color-transparent: #ffffff00;
+  --ds-button-color-ink-reverse: #ffffff;
+  --ds-button-radius-xl: 12px;
+  --ds-button-radius-round: 1776px;
+  --ds-button-border-width-md: 2px;
+  --ds-button-font-family: "Proxima Nova", Arial, sans-serif;
+  --ds-button-font-weight: 600;
+  --ds-button-bg: var(--ds-button-color-theme);
+  --ds-button-fg: var(--ds-button-color-text-reverse);
+  --ds-button-border: var(--ds-button-color-transparent);
+  --ds-button-hover-bg: var(--ds-button-color-theme-strong);
+  --ds-button-active-bg: var(--ds-button-color-theme-stronger);
+  --ds-button-padding-block: 12px;
+  --ds-button-padding-inline: 20px;
+  --ds-button-min-height: 48px;
+  --ds-button-gap: 8px;
+  --ds-button-font-size: 16px;
+  --ds-button-line-height: 24px;
+  --ds-button-letter-spacing: 0.0443px;
+  align-items: center;
+  appearance: none;
+  background: var(--ds-button-bg);
+  border: var(--ds-button-border-width-md) solid var(--ds-button-border);
+  border-radius: var(--ds-button-radius-xl);
+  color: var(--ds-button-fg);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: var(--ds-button-font-family);
+  font-size: var(--ds-button-font-size);
+  font-weight: var(--ds-button-font-weight);
+  gap: var(--ds-button-gap);
+  justify-content: center;
+  letter-spacing: var(--ds-button-letter-spacing);
+  line-height: var(--ds-button-line-height);
+  min-height: var(--ds-button-min-height);
+  padding: var(--ds-button-padding-block) var(--ds-button-padding-inline);
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition:
+    background-color 120ms ease,
+    border-color 120ms ease,
+    color 120ms ease;
+}
+
+.ds-button[data-hovered] {
+  background: var(--ds-button-hover-bg);
+}
+
+.ds-button[data-pressed] {
+  background: var(--ds-button-active-bg);
+}
+
+.ds-button[data-focus-visible] {
+  outline: 3px solid #face00;
+  outline-offset: 2px;
+}
+
+.ds-button[data-disabled] {
+  --ds-button-bg: var(--ds-button-color-disabled-bg);
+  --ds-button-border: var(--ds-button-color-transparent);
+  --ds-button-fg: var(--ds-button-color-text-disabled);
+  cursor: not-allowed;
+}
+
+.ds-button[data-pending] {
+  cursor: progress;
+}
+
+.ds-button--sm {
+  --ds-button-padding-block: 8px;
+  --ds-button-padding-inline: 16px;
+  --ds-button-min-height: 40px;
+}
+
+.ds-button--md {
+  --ds-button-padding-block: 12px;
+  --ds-button-padding-inline: 20px;
+  --ds-button-min-height: 48px;
+}
+
+.ds-button--lg {
+  --ds-button-padding-block: 16px;
+  --ds-button-padding-inline: 24px;
+  --ds-button-min-height: 56px;
+  --ds-button-font-size: 18px;
+  --ds-button-line-height: 28px;
+  --ds-button-letter-spacing: 0.0278px;
+}
+
+.ds-button--outline {
+  --ds-button-bg: var(--ds-button-color-ink-reverse);
+  --ds-button-fg: var(--ds-button-color-theme);
+  --ds-button-border: var(--ds-button-color-theme);
+  --ds-button-hover-bg: #eff6fb;
+  --ds-button-active-bg: #cddde9;
+}
+
+.ds-button--ghost {
+  --ds-button-bg: var(--ds-button-color-transparent);
+  --ds-button-fg: var(--ds-button-color-text);
+  --ds-button-border: var(--ds-button-color-transparent);
+  --ds-button-hover-bg: #eff6fb;
+  --ds-button-active-bg: #cddde9;
+  text-decoration: underline;
+}
+
+.ds-button--text {
+  --ds-button-bg: var(--ds-button-color-transparent);
+  --ds-button-fg: var(--ds-button-color-link);
+  --ds-button-border: var(--ds-button-color-transparent);
+  --ds-button-hover-bg: var(--ds-button-color-transparent);
+  --ds-button-active-bg: var(--ds-button-color-transparent);
+  border-radius: 0;
+  min-height: auto;
+  padding: 0;
+  text-decoration: underline;
+}
+
+.ds-button--text[data-hovered] {
+  color: var(--ds-button-color-link-strong);
+}
+
+.ds-button--text[data-pressed] {
+  color: var(--ds-button-color-link-stronger);
+}
+
+.ds-button--inverted {
+  --ds-button-color-ink-reverse: #1b1b1b;
+  --ds-button-fg: var(--ds-button-color-text-reverse);
+}
+
+.ds-button--outline.ds-button--inverted {
+  --ds-button-bg: var(--ds-button-color-transparent);
+  --ds-button-fg: var(--ds-button-color-text-reverse);
+  --ds-button-border: var(--ds-button-color-text-reverse);
+  --ds-button-hover-bg: rgb(255 255 255 / 12%);
+  --ds-button-active-bg: rgb(255 255 255 / 20%);
+}
+
+.ds-button--ghost.ds-button--inverted {
+  --ds-button-fg: var(--ds-button-color-text-reverse);
+  --ds-button-hover-bg: rgb(255 255 255 / 12%);
+  --ds-button-active-bg: rgb(255 255 255 / 20%);
+}
+
+.ds-button--text.ds-button--inverted {
+  color: #a7a9ab;
+}
+
+.ds-button--text.ds-button--inverted[data-hovered] {
+  color: #ededed;
+}
+
+.ds-button--text.ds-button--inverted[data-pressed] {
+  color: #ffffff;
+}
+
+.ds-button--circle {
+  border-radius: var(--ds-button-radius-round);
+  max-width: var(--ds-button-min-height);
+  min-width: var(--ds-button-min-height);
+  padding: 0;
+}
+
+.ds-button__icon {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  font-size: 1em;
+  justify-content: center;
+  line-height: 1;
+}
+
+.ds-button__icon--circle {
+  font-size: 24px;
+  height: 24px;
+  width: 24px;
+}
+
+.ds-button__description {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
