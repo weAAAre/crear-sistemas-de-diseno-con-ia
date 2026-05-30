@@ -10,6 +10,7 @@ and remaining risk.
 
 - The agent reads the relevant existing files before editing.
 - The agent reads only the relevant docs from `docs/`.
+- Fresh Codex worktrees are prepared with `pnpm setup:worktree`.
 - Figma Console is used before any design decision is implemented or changed.
 - React Aria Components is checked before implementing interactive behavior.
 - The change is scoped to the requested behavior.
@@ -20,6 +21,7 @@ and remaining risk.
 ## Validation Commands
 
 ```bash
+pnpm setup:worktree
 pnpm install --frozen-lockfile
 pnpm typecheck
 pnpm build
@@ -54,6 +56,7 @@ Create a new Button variant because it looks useful, then document it after the 
 ## Related Documents
 
 - [Figma Source Of Truth](./figma-source-of-truth.md)
+- [Codex Worktree Setup](./codex-worktree-setup.md)
 - [React Aria Foundation](./components/react-aria-foundation.md)
 - [Storybook Authoring](./components/storybook-authoring.md)
 - [Accessibility Validation](./components/accessibility-validation.md)

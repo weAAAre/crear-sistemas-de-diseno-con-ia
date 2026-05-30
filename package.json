@@ -6,6 +6,8 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
+    "setup:worktree": "bash scripts/codex-worktree-setup.sh",
+    "setup:worktree:full": "bash scripts/codex-worktree-setup.sh --full",
     "storybook": "pnpm --filter @taller/docs storybook",
     "typecheck": "turbo run typecheck"
   },

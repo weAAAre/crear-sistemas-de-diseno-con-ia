@@ -19,6 +19,7 @@ Respond to the user in English.
 ## Useful Commands
 
 ```bash
+pnpm setup:worktree
 pnpm install --frozen-lockfile
 pnpm typecheck
 pnpm build
@@ -26,6 +27,7 @@ pnpm storybook
 ```
 
 Run `pnpm typecheck` and `pnpm build` before considering a code change ready.
+Run `pnpm setup:worktree` when starting in a fresh Codex worktree.
 
 ## Source Of Truth
 
@@ -60,6 +62,7 @@ Detailed conventions live in `docs/`. Use this map to decide what to read:
 ```text
 docs/
 ├── agentic-workflow.md
+├── codex-worktree-setup.md
 ├── documentation-guidelines.md
 ├── figma-source-of-truth.md
 ├── initial-docs-proposal.md
@@ -81,6 +84,7 @@ A component change is not ready unless all relevant criteria are true:
 
 - The implementation is traceable to Figma or an existing documented convention.
 - Interactive behavior uses React Aria Components when an equivalent primitive exists.
+- Fresh worktrees are prepared with `pnpm setup:worktree` before implementation.
 - The public API is minimal and typed.
 - Storybook covers default behavior, variants, states, disabled/loading/error states when applicable, and accessibility notes.
 - Keyboard behavior is documented and tested manually when interaction exists.

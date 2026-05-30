@@ -15,3 +15,9 @@ pnpm build
 pnpm typecheck
 pnpm storybook
 ```
+
+For a fresh Codex worktree, run:
+
+```bash
+pnpm setup:worktree
+```
