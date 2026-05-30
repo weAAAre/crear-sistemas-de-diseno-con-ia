@@ -1,0 +1,18 @@
+import { Canvas, Meta, Stories } from "@storybook/addon-docs/blocks";
+import * as CheckboxStories from "./Checkbox.stories";
+
+<Meta of={CheckboxStories} />
+
+# Checkbox
+
+A checkbox lets people select one option, confirm a choice, or turn an item on
+or off. This implementation is scoped to the standalone `NYS Checkbox`
+component; grouped checkbox behavior is documented as a follow-up because Figma
+defines `NYS Checkbox Group` separately.
+
+The component uses React Aria checkbox primitives for form semantics, keyboard
+interaction, disabled state, invalid state, and focus-visible behavior.
+
+<Canvas of={CheckboxStories.Playground} />
+
+<Stories />
